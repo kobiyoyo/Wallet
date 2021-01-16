@@ -18,19 +18,40 @@ gem 'puma', '~> 3.11'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
- 
+gem 'bcrypt', '~> 3.1.7'
+gem 'dotenv-rails'
+gem 'faraday'
+gem 'hirb', '~> 0.7.3'
+gem 'raddocs'
+gem 'rspec_api_documentation'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'simple_command'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'rubocop', '~>0.81.0'
+gem 'rubocop-rspec', require: false
+gem 'case_transform', '~> 0.2'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'active_model_serializers'
+gem 'jwt'
 gem 'rack-cors'
+gem 'rswag'
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 4.0.0'
+  gem 'rswag-specs'
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'shoulda-matchers'
 end
 
 group :development do
