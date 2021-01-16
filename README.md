@@ -1,4 +1,4 @@
-# Dev Placement
+## Dev Placement Project
 
 ## Database Schema
   <img src="app/assets/images/screenshot.png" alt="facebook-project">
@@ -7,9 +7,11 @@
 To setup files and the app run
 ```
 docker-compose up
-
 ```
-
+To run test suite
+```
+docker-compose up
+```
 ## API Documentation
 [Heroku Link]()
 ## Thought Process
