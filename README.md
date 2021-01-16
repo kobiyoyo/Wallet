@@ -10,11 +10,21 @@ docker-compose up
 ```
 To run test suite
 ```
-docker-compose up
+docker-compose run web bundle exec rspec spec/
 ```
 ## API Documentation
 [Heroku Link]()
+
+
 ## Thought Process
+
+
+## Backend
+- Ruby on Rails - the web framework used to build the api .
+- Rspec - testing framework
+- PostgreSQL -  the main reason PostgreSQL is used , in a case where there is a migration failure while modifying your database records , the entire modification gets rolled back to where you started instead of crashing like  MySQL.
+- RSpec API Doc Generator - for api documentation
+
 
 ## Requirements
 
@@ -45,10 +55,3 @@ docker-compose up
 - [x] Write concise api documentation for your endpoints
 - [ ] Write tests to cover all scenarios that you implement(I couldnt test service objects,due to time constraints)
 - [x] Write a docker-compose file to startup your application and start your db
-
-
-## Backend
-- Ruby on Rails - the web framework used to build the api .
-- Rspec - testing framework
-- PostgreSQL -  the main reason PostgreSQL is used , in a case where there is a migration failure while modifying your database records , the entire modification gets rolled back to where you started instead of crashing like  MySQL.
-- RSpec API Doc Generator - for api documentation
