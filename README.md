@@ -4,6 +4,7 @@
  <a href="https://codeclimate.com/github/kobiyoyo/DevPlaceAssessment/maintainability"><img src="https://api.codeclimate.com/v1/badges/dcb2b5a50ac176e8c1ed/maintainability" /></a>
  <a href="https://codeclimate.com/github/kobiyoyo/DevPlaceAssessment/test_coverage"><img src="https://api.codeclimate.com/v1/badges/dcb2b5a50ac176e8c1ed/test_coverage" /></a>
   </p>
+
 ## Database Schema
   <img src="app/assets/images/screenshot.png" alt="facebook-project">
 
@@ -11,6 +12,14 @@
 To setup files and the app run
 ```
 docker-compose up
+```
+Run seed data
+```
+docker-compose run web rails db:seed
+```
+Login Details
+```
+Email: admin@admin.com  Password 01234Admin
 ```
 To run test suite
 ```
@@ -20,8 +29,11 @@ docker-compose run web bundle exec rspec spec/
 [Heroku Link]()
 
 
-## Thought Process
-
+## Architecture
+- There are four entities created in this project (wallet, user, currency, transactions)
+- The transactions entity handles the increment and decrement of wallet amount/balance,for example the amount to increment is gotten from transactions table,then used to increment wallet amount.
+- In order to create a main wallet,when signing up you are to provide a currency to create a wallet,the wallet is created automatically once signup is successful ,main wallet can be identified when the main attribute is true.
+- Elite and Noob users can signup through the signup link,while admin could be created through seed data. 
 
 ## Backend
 - Ruby on Rails - the web framework used to build the api .
@@ -59,3 +71,11 @@ docker-compose run web bundle exec rspec spec/
 - [x] Write concise api documentation for your endpoints
 - [ ] Write tests to cover all scenarios that you implement(I couldnt test service objects,due to time constraints)
 - [x] Write a docker-compose file to startup your application and start your db
+
+
+#### Note Errors:
+Please kindly note, I get this error whenever i try to run my test suite
+```
+ FATAL:  could not open file "global/pg_filenode.map": Permission denied
+
+```
