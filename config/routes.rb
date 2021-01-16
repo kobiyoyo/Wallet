@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :wallets
+  resources :currencies
   resources :users
   	  namespace :api do
 	    namespace :v1 do
