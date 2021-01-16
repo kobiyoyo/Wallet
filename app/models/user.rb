@@ -5,6 +5,9 @@ class User < ApplicationRecord
   ROLES = %i[noob elite admin].freeze
   enum role: ROLES
 
+  # Relationship
+  has_many :wallets
+  has_many :transactions
 
 
   # Validations
