@@ -1,3 +1,4 @@
+
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -13,4 +14,4 @@ development:
 
 test:
   <<: *default
-  database: myapp_tes
+  database: myapp_test
