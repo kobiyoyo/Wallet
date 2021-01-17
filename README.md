@@ -23,7 +23,7 @@ Email: admin@admin.com  Password 01234Admin
 ```
 To run test suite
 ```
-docker-compose run web bundle exec rspec spec/
+docker-compose run web bundle exec rspec 
 ```
 ## API Documentation
 #### Sign in
