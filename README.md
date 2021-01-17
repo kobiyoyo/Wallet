@@ -11,8 +11,10 @@
 ## How to Use
 To setup files and the app run
 ```
-docker-compose up
+docker-compose run web bundle install
 docker-compose run web rails db:create
+docker-compose up
+
 ```
 Run seed data
 ```
