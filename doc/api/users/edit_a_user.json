@@ -1,0 +1,63 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "PATCH",
+  "route": "api/v1/users/:user_id",
+  "description": "Edit a user",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "active",
+      "description": "User first_name"
+    },
+    {
+      "name": "role",
+      "description": "User last_name"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "api/v1/users/106",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 106,\n  \"first_name\": \"MyString\",\n  \"last_name\": \"MyString\",\n  \"email\": \"rilux@gmail.com\",\n  \"role\": \"admin\",\n  \"active\": true,\n  \"phone\": null,\n  \"password_digest\": \"$2a$04$jDva8MGZ3OB4cKqPCOCqIe6VAL74eJvwm0s6usiccx6DgJxApPUhq\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/users/106\" -d '' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    },
+    {
+      "request_method": "PATCH",
+      "request_path": "api/v1/users/106",
+      "request_body": "{\"role\":\"admin\",\"active\":true}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 106,\n  \"first_name\": \"MyString\",\n  \"last_name\": \"MyString\",\n  \"email\": \"rilux@gmail.com\",\n  \"role\": \"admin\",\n  \"active\": true,\n  \"phone\": null,\n  \"password_digest\": \"$2a$04$jDva8MGZ3OB4cKqPCOCqIe6VAL74eJvwm0s6usiccx6DgJxApPUhq\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/users/106\" -d '{\"role\":\"admin\",\"active\":true}' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

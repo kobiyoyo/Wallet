@@ -1,0 +1,63 @@
+{
+  "resource": "Currencies",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/currencies",
+  "description": "Create a currency",
+  "explanation": "Create a currency",
+  "parameters": [
+    {
+      "name": "name",
+      "description": "currency name"
+    },
+    {
+      "name": "abbreviation",
+      "description": "currency abbreviation"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/currencies",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"name\": [\n    \"can't be blank\"\n  ],\n  \"abbreviation\": [\n    \"can't be blank\",\n    \"is too short (minimum is 3 characters)\"\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/currencies\" -d '' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    },
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/currencies",
+      "request_body": "{\"name\":\"U.S Dollar\",\"abbreviation\":\"USD\"}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 78,\n  \"name\": \"U.S Dollar\",\n  \"abbreviation\": \"USD\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/currencies\" -d '{\"name\":\"U.S Dollar\",\"abbreviation\":\"USD\"}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

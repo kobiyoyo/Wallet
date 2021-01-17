@@ -1,0 +1,153 @@
+{
+  "resources": [
+    {
+      "name": "Authentication",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Sign up a user",
+          "link": "authentication/sign_up_a_user.json",
+          "groups": "all",
+          "route": "auth/signup",
+          "method": "post"
+        },
+        {
+          "description": "Sign in user",
+          "link": "authentication/sign_in_user.json",
+          "groups": "all",
+          "route": "auth/signin",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Currencies",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get all currencies",
+          "link": "currencies/get_all_currencies.json",
+          "groups": "all",
+          "route": "api/v1/currencies",
+          "method": "get"
+        },
+        {
+          "description": "Create a currency",
+          "link": "currencies/create_a_currency.json",
+          "groups": "all",
+          "route": "api/v1/currencies",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get all transactions",
+          "link": "transactions/get_all_transactions.json",
+          "groups": "all",
+          "route": "api/v1/transactions",
+          "method": "get"
+        },
+        {
+          "description": "Create a transaction",
+          "link": "transactions/create_a_transaction.json",
+          "groups": "all",
+          "route": "api/v1/transactions",
+          "method": "post"
+        },
+        {
+          "description": "Edit a transaction",
+          "link": "transactions/edit_a_transaction.json",
+          "groups": "all",
+          "route": "api/v1/transactions/:transaction_id",
+          "method": "patch"
+        },
+        {
+          "description": "Delete a transaction",
+          "link": "transactions/delete_a_transaction.json",
+          "groups": "all",
+          "route": "api/v1/transactions/:transaction_id",
+          "method": "delete"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get all users",
+          "link": "users/get_all_users.json",
+          "groups": "all",
+          "route": "api/v1/users",
+          "method": "get"
+        },
+        {
+          "description": "Get a user",
+          "link": "users/get_a_user.json",
+          "groups": "all",
+          "route": "api/v1/users/:user_id",
+          "method": "get"
+        },
+        {
+          "description": "Create a user",
+          "link": "users/create_a_user.json",
+          "groups": "all",
+          "route": "api/v1/users",
+          "method": "post"
+        },
+        {
+          "description": "Edit a user",
+          "link": "users/edit_a_user.json",
+          "groups": "all",
+          "route": "api/v1/users/:user_id",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "name": "Wallets",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get all wallets",
+          "link": "wallets/get_all_wallets.json",
+          "groups": "all",
+          "route": "api/v1/wallets",
+          "method": "get"
+        },
+        {
+          "description": "Get a wallet",
+          "link": "wallets/get_a_wallet.json",
+          "groups": "all",
+          "route": "api/v1/wallets/:wallet_id",
+          "method": "get"
+        },
+        {
+          "description": "Create a wallet",
+          "link": "wallets/create_a_wallet.json",
+          "groups": "all",
+          "route": "api/v1/wallets",
+          "method": "post"
+        },
+        {
+          "description": "Edit a wallet",
+          "link": "wallets/edit_a_wallet.json",
+          "groups": "all",
+          "route": "api/v1/wallets/:wallet_id",
+          "method": "patch"
+        },
+        {
+          "description": "Delete a wallet",
+          "link": "wallets/delete_a_wallet.json",
+          "groups": "all",
+          "route": "api/v1/wallets/:wallet_id",
+          "method": "delete"
+        }
+      ]
+    }
+  ]
+}

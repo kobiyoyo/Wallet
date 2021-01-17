@@ -1,0 +1,36 @@
+{
+  "resource": "Wallets",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/wallets/:wallet_id",
+  "description": "Get a wallet",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/wallets/75",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 75,\n  \"amount\": \"0.0\",\n  \"main\": false,\n  \"user\": {\n    \"id\": 108,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"elite\",\n    \"active\": true,\n    \"phone\": null,\n    \"password_digest\": \"$2a$04$i34o5p7IJ5KZCZkldYr3BuoW50.Lj0n9HvvvaHuWTtS0UbjvPR0qq\"\n  },\n  \"currency\": {\n    \"id\": 88,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/api/v1/wallets/75\" -X GET \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

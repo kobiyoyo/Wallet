@@ -12,6 +12,7 @@
 To setup files and the app run
 ```
 docker-compose up
+docker-compose run web rails db:create
 ```
 Run seed data
 ```
@@ -23,10 +24,136 @@ Email: admin@admin.com  Password 01234Admin
 ```
 To run test suite
 ```
-docker-compose run web bundle exec rspec spec/
+docker-compose run web bundle exec rspec 
 ```
 ## API Documentation
-[Heroku Link]()
+#### Sign in
+     POST  auth/signin
+```
+     {
+      "email":"rilux@gmail.com",
+      "password":"123234566"
+      
+      } 
+```
+
+#### Signup
+      POST auth/signup
+```
+      {
+        "first_name": "simon",
+        "currency_id": 76,
+        "last_name": "adama",
+        "email": "simon@gmail.com",
+        "password": "123234566"
+      }
+ ```
+#### Currency
+###### List all currencies
+     GET api/v1/currencies
+###### Create currency
+     POST api/v1/currencies
+```
+	{
+	  "name": "U.S Dollar",
+	  "abbreviation": "USD"
+	}
+```
+#### Transaction
+###### List all transactions
+     GET api/v1/transactions
+
+###### Create transaction
+     POST api/v1/transactions
+```
+	{
+	  "transaction_type": "deposit",
+	  "description": "phone money i am savings",
+	  "amount": 23.21,
+	  "user_id": 99,
+	  "wallet_id": 70,
+	  "currency_id": 80
+	}
+```
+###### Edit transaction
+    PATCH api/v1/transactions/24
+ ```
+	{
+	  "confirm": true
+	}
+
+ ```
+###### Delete transaction
+	DELETE api/v1/transactions/25
+
+
+#### User
+###### List all users
+     GET api/v1/users
+
+###### Get a user
+     GET api/v1/users/1
+     
+###### Create user
+     POST api/v1/users
+```
+	{
+	  "first_name": "simon",
+	  "currency_id": 85,
+	  "last_name": "adama",
+	  "email": "simon@gmail.com",
+	  "password": "123234566"
+	}
+```
+###### Edit user
+    PATCH api/v1/users/24
+ ```
+	{
+	  "role": "admin",
+	  "active": true
+	}
+
+ ```
+#### Transaction
+###### List all wallets
+     GET api/v1/wallets
+
+###### Get a wallet
+     GET api/v1/wallets/1
+
+###### Create wallet
+     POST api/v1/wallets
+```
+	{
+	  "main": false,
+	  "user_id": 109,
+	  "currency_id": 89
+	}
+```
+###### Edit wallet
+    PATCH api/v1/wallets/24
+ ```
+	{
+	  "currency_id": 90
+	}
+
+ ```
+###### Delete wallet
+	DELETE api/v1/wallets/25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Architecture

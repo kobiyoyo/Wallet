@@ -1,0 +1,79 @@
+{
+  "resource": "Transactions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/transactions",
+  "description": "Create a transaction",
+  "explanation": "Create a transaction",
+  "parameters": [
+    {
+      "name": "transaction_type",
+      "description": "transaction type"
+    },
+    {
+      "name": "description",
+      "description": "transaction description"
+    },
+    {
+      "name": "amount",
+      "description": "transaction amount"
+    },
+    {
+      "name": "user_id",
+      "description": "transaction user_id"
+    },
+    {
+      "name": "wallet_id",
+      "description": "transaction wallet_id"
+    },
+    {
+      "name": "currency_id",
+      "description": "transaction currency_id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/transactions",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/transactions\" -d '' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    },
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/transactions",
+      "request_body": "{\"transaction_type\":\"deposit\",\"description\":\"phone money i am savings\",\"amount\":23.21,\"user_id\":99,\"wallet_id\":70,\"currency_id\":80}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 23,\n  \"transaction_type\": \"deposit\",\n  \"description\": \"phone money i am savings\",\n  \"amount\": \"23.21\",\n  \"status\": \"successful\",\n  \"confirm\": null,\n  \"user\": {\n    \"id\": 99,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null,\n    \"password_digest\": \"$2a$04$.LknTlHG8.dMuBYp.VTpt.al97S/GB.LdlO4Pp/gt4UzhDskium3C\"\n  },\n  \"wallet\": {\n    \"id\": 70,\n    \"amount\": \"46.42\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 80,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/transactions\" -d '{\"transaction_type\":\"deposit\",\"description\":\"phone money i am savings\",\"amount\":23.21,\"user_id\":99,\"wallet_id\":70,\"currency_id\":80}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
