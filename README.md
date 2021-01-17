@@ -202,4 +202,5 @@ docker-compose run web bundle exec rspec
 - [x] Write a docker-compose file to startup your application and start your db
 
 
-#
+# Note 
+- I purposely left the api key for the currency exchanger open, since they have strict policies .
