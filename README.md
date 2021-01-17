@@ -12,6 +12,7 @@
 To setup files and the app run
 ```
 docker-compose up
+docker-compose run web rails db:create
 ```
 Run seed data
 ```
