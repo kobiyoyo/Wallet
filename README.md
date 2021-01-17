@@ -202,9 +202,4 @@ docker-compose run web bundle exec rspec
 - [x] Write a docker-compose file to startup your application and start your db
 
 
-#### Note Errors:
-Please kindly note, I get this error whenever i try to run my test suite
-```
- FATAL:  could not open file "global/pg_filenode.map": Permission denied
-
-```
+#
