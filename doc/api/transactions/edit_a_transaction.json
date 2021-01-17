@@ -1,0 +1,59 @@
+{
+  "resource": "Transactions",
+  "resource_explanation": null,
+  "http_method": "PATCH",
+  "route": "api/v1/transactions/:transaction_id",
+  "description": "Edit a transaction",
+  "explanation": "Edit a transaction",
+  "parameters": [
+    {
+      "name": "confirm",
+      "description": "transaction confirm"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "api/v1/transactions/24",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 24,\n  \"transaction_type\": \"withdraw\",\n  \"description\": \"phone money i am saving\",\n  \"amount\": \"0.0\",\n  \"status\": \"declined\",\n  \"confirm\": false,\n  \"user\": {\n    \"id\": 100,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null,\n    \"password_digest\": \"$2a$04$XHZiJ8beOdn.uzPdxhIv6eguxAwqmSl9HIjF2BL.ikTbqadALh6wS\"\n  },\n  \"wallet\": {\n    \"id\": 71,\n    \"amount\": \"0.0\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 81,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/transactions/24\" -d '' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    },
+    {
+      "request_method": "PATCH",
+      "request_path": "api/v1/transactions/24",
+      "request_body": "{\"confirm\":true}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 24,\n  \"transaction_type\": \"withdraw\",\n  \"description\": \"phone money i am saving\",\n  \"amount\": \"0.0\",\n  \"status\": \"approved\",\n  \"confirm\": true,\n  \"user\": {\n    \"id\": 100,\n    \"first_name\": \"MyString\",\n    \"last_name\": \"MyString\",\n    \"email\": \"add@gmail.com\",\n    \"role\": \"admin\",\n    \"active\": true,\n    \"phone\": null,\n    \"password_digest\": \"$2a$04$XHZiJ8beOdn.uzPdxhIv6eguxAwqmSl9HIjF2BL.ikTbqadALh6wS\"\n  },\n  \"wallet\": {\n    \"id\": 71,\n    \"amount\": \"0.0\",\n    \"main\": false\n  },\n  \"currency\": {\n    \"id\": 81,\n    \"name\": \"MyString\",\n    \"abbreviation\": \"MyString\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/transactions/24\" -d '{\"confirm\":true}' -X PATCH \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
