@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
   skip_before_action :authenticate_request, only: %i[login create]
   before_action :set_user, only: %i[show update destroy]
   before_action :authorize_admin, only: %i[index show update]
-  
+
   # POST /index
   def index
     @users = User.all.order('created_at DESC')
@@ -49,7 +49,7 @@ class Api::V1::UsersController < ApplicationController
     else
       render json: { error: command.errors }, status: :unauthorized
     end
-   end
+  end
 
   def user_params
     params.permit(
@@ -67,5 +67,5 @@ class Api::V1::UsersController < ApplicationController
       :active,
       :role
     )
-end
+  end
 end

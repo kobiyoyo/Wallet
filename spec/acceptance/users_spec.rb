@@ -12,7 +12,6 @@ resource 'Users' do
     header 'Authorization', valid_headers
     header 'Content-Type', 'application/json'
   end
-
   get 'api/v1/users' do
     example_request 'Get all users' do
       expect(status).to eq 200
@@ -31,7 +30,13 @@ resource 'Users' do
     parameter :password, 'User password'
     parameter :currency_id, 'User currency'
     example_request 'Create a user' do
-      do_request(first_name: 'simon', currency_id: currency.id, last_name: 'adama', email: 'simon@gmail.com', password: '123234566')
+      do_request(
+        first_name: 'simon',
+        currency_id: currency.id,
+        last_name: 'adama',
+        email: 'simon@gmail.com',
+        password: '123234566'
+      )
       expect(status).to eq 200
     end
   end

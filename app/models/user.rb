@@ -9,7 +9,6 @@ class User < ApplicationRecord
   has_many :wallets
   has_many :transactions
 
-
   # Validations
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
@@ -25,5 +24,4 @@ class User < ApplicationRecord
   def set_default_role
     self.role ||= :noob
   end
-
 end

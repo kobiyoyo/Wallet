@@ -17,13 +17,13 @@ class Api::V1::WalletsController < ApplicationController
   # POST /wallets
   def create
     @wallet = @current_user.wallets.build(wallet_params)
-    create_wallet = CreateWallet.new
-    if create_wallet.create(@wallet, @current_user).save
-      render json: create_wallet.create(@wallet, @current_user)
+    new_wallet = CreateWallet.new
+    create_wallet = new_wallet.create(@wallet, @current_user)
+    if create_wallet.save
+      render json: create_wallet
     else
       render json: @wallet.errors, status: :unprocessable_entity
     end
-
   end
 
   # PATCH/PUT /wallets/1
@@ -49,7 +49,7 @@ class Api::V1::WalletsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def wallet_params
-    params.permit(:main, :user_id, :currency_id)
+    params.permit(:user_id, :currency_id)
   end
 
   # admin could change the main currency of any wallet
