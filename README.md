@@ -1,8 +1,8 @@
 ## Dev Placement Project
 
   <p align="left">
-https://github.com/kobiyoyo/DevPlaceAssessment/workflows/.github/workflows/main.yml/badge.svg
 
+ <a href="https://codeclimate.com/github/kobiyoyo/DevPlaceAssessment/maintainability"><img src="https://github.com/kobiyoyo/DevPlaceAssessment/workflows/.github/workflows/main.yml/badge.svg" /></a>
   </p>
 
 ## Database Schema
