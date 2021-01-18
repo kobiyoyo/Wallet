@@ -1,7 +1,7 @@
 ## Dev Placement Project
 
   <p align="left">
-![example workflow file path](https://github.com/kobiyoyo/DevPlaceAssessment/workflows/.github/workflows/main.yml/badge.svg)
+https://github.com/kobiyoyo/DevPlaceAssessment/workflows/.github/workflows/main.yml/badge.svg
 
   </p>
 
