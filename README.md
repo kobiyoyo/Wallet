@@ -1,8 +1,8 @@
 ## Dev Placement Project
 
   <p align="left">
- <a href="https://codeclimate.com/github/kobiyoyo/DevPlaceAssessment/maintainability"><img src="https://api.codeclimate.com/v1/badges/dcb2b5a50ac176e8c1ed/maintainability" /></a>
- <a href="https://codeclimate.com/github/kobiyoyo/DevPlaceAssessment/test_coverage"><img src="https://api.codeclimate.com/v1/badges/dcb2b5a50ac176e8c1ed/test_coverage" /></a>
+![example workflow file path](https://github.com/kobiyoyo/DevPlaceAssessment/workflows/.github/workflows/main.yml/badge.svg)
+
   </p>
 
 ## Database Schema
