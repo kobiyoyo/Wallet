@@ -8,7 +8,6 @@ resource 'Authentication' do
   before do
     header 'Content-Type', 'application/json'
   end
-
   post 'auth/signup' do
     route_summary 'This is used to signup a user'
     parameter :first_name, 'User first_name'
@@ -18,7 +17,13 @@ resource 'Authentication' do
     parameter :currency_id, 'User currency'
     example_request 'Sign up a user' do
       explanation 'Sign up a user'
-      do_request(first_name: 'simon', currency_id: currency.id, last_name: 'adama', email: 'simon@gmail.com', password: '123234566')
+      do_request(
+        first_name: 'simon',
+        currency_id: currency.id,
+        last_name: 'adama',
+        email: 'simon@gmail.com',
+        password: '123234566'
+      )
       expect(status).to eq 200
     end
   end
@@ -28,7 +33,6 @@ resource 'Authentication' do
       parameter :email, 'User email'
       parameter :password, 'User password'
     end
-
     context 'when it successful 200' do
       example 'Sign in user' do
         request = { email: user.email, password: user.password }

@@ -30,6 +30,7 @@ class Deposit < TransactionAction
     else
       if !transaction_params.currency_id
         notification = { message: 'Please provide a currency' }
+        notification
       else
         transaction_params.user_id = current_user.id
         transaction_params.confirm = true

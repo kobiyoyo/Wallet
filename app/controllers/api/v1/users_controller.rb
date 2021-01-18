@@ -49,7 +49,7 @@ class Api::V1::UsersController < ApplicationController
     else
       render json: { error: command.errors }, status: :unauthorized
     end
-   end
+  end
 
   def user_params
     params.permit(
@@ -67,5 +67,5 @@ class Api::V1::UsersController < ApplicationController
       :active,
       :role
     )
-end
+  end
 end

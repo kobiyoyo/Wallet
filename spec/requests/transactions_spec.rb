@@ -6,7 +6,17 @@ RSpec.describe '/transactions', type: :request do
   let(:user) { FactoryBot.create(:user, role: 'admin', password: '123234566', password_confirmation: '123234566') }
   let!(:currency) { FactoryBot.create(:currency) }
   let!(:wallet) { FactoryBot.create(:wallet, user: user, currency: currency) }
-  let(:valid_attributes) { { transaction_type: 'deposit', status: 'approved', description: 'phone money i am savings', amount: 23.21, user_id: user.id, wallet_id: wallet.id, currency_id: currency.id } }
+  let(:valid_attributes) do
+    {
+      transaction_type: 'deposit',
+      status: 'approved',
+      description: 'phone money i am savings',
+      amount: 23.21,
+      user_id: user.id,
+      wallet_id: wallet.id,
+      currency_id: currency.id
+    }
+  end
   let(:invalid_attributes) { { transaction_type: '', description: '' } }
   let(:transaction) { FactoryBot.create(:transaction) }
   let(:valid_headers) do

@@ -7,11 +7,13 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
-
+    - "app/controllers/concerns/exception_handler.rb"
+    - "app/auth/authorize_api_request.rb"
+    - "app/services/*"
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 130
 Metrics/MethodLength:
   Include:
     - "app/controllers/*"
@@ -26,7 +28,7 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
-  Max: 30
+  Max: 60
 
 Style/Documentation:
   Enabled: false

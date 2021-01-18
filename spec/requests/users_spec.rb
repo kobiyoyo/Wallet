@@ -6,7 +6,15 @@ RSpec.describe 'Users', type: :request do
   let!(:currency) { FactoryBot.create(:currency) }
   let!(:wallet) { FactoryBot.create(:wallet, user: user, currency: currency) }
   let(:valid_attributes) { { first_name: 'simon', last_name: 'adama', email: 'simon@gmail.com', password: '123234566' } }
-  let(:post_valid_attributes) { { first_name: 'simon', last_name: 'adama', email: 'simon@gmail.com', password: '123234566', currency_id: currency.id } }
+  let(:post_valid_attributes) do
+    {
+      first_name: 'simon',
+      last_name: 'adama',
+      email: 'simon@gmail.com',
+      password: '123234566',
+      currency_id: currency.id
+    }
+  end
   let(:invalid_attributes) { { transaction_type: '', description: '' } }
   let(:transaction) { FactoryBot.create(:transaction) }
   let(:valid_headers) do
