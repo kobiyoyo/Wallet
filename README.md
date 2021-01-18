@@ -1,9 +1,7 @@
 ## Dev Placement Project
 
-  <p align="left">
+  [![Actions Status](https://github.com/kobiyoyo/DevPlaceAssessment/workflows/Rails%20tests/badge.svg)](https://github.com/kobiyoyo/DevPlaceAssessment/actions)
 
- <a href="https://codeclimate.com/github/kobiyoyo/DevPlaceAssessment/maintainability"><img src="https://github.com/kobiyoyo/DevPlaceAssessment/workflows/.github/workflows/main.yml/badge.svg" /></a>
-  </p>
 
 ## Database Schema
   <img src="app/assets/images/screenshot.png" alt="facebook-project">
