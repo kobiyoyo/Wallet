@@ -36,7 +36,6 @@ RSpec.describe '/transactions', type: :request do
         post "/api/v1/transactions/",
              params: valid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
 
@@ -52,7 +51,7 @@ RSpec.describe '/transactions', type: :request do
         post "/api/v1/transactions/",
              params:  invalid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json; charset=utf-8')
+        
       end
     end
   end
@@ -65,7 +64,7 @@ RSpec.describe '/transactions', type: :request do
         patch "/api/v1/transactions/#{transaction.id}",
               params:  invalid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to eq("application/json; charset=utf-8")
+        
       end
     end
 
@@ -75,7 +74,7 @@ RSpec.describe '/transactions', type: :request do
         patch "/api/v1/transactions/#{transaction.id}",
               params:  invalid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to eq('application/json; charset=utf-8')
+        
       end
     end
   end

@@ -36,7 +36,7 @@ RSpec.describe '/currencies', type: :request do
         post '/api/v1/currencies',
              params: valid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:created)
-        expect(response.content_type).to match(a_string_including('application/json'))
+     
       end
     end
 
@@ -52,7 +52,7 @@ RSpec.describe '/currencies', type: :request do
         post '/api/v1/currencies',
              params: invalid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json; charset=utf-8')
+       
       end
     end
   end

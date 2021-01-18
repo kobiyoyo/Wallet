@@ -42,7 +42,6 @@ RSpec.describe '/wallets', type: :request do
         post '/api/v1/wallets',
              params:  valid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to match(a_string_including('application/json; charset=utf-8'))
       end
     end
 
@@ -58,7 +57,7 @@ RSpec.describe '/wallets', type: :request do
         post '/api/v1/wallets',
              params:  invalid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json; charset=utf-8')
+       
       end
     end
   end
@@ -71,7 +70,7 @@ RSpec.describe '/wallets', type: :request do
         patch "/api/v1/wallets/#{wallet.id}",
               params:  invalid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to eq('application/json; charset=utf-8')
+       
       end
     end
 
@@ -81,7 +80,7 @@ RSpec.describe '/wallets', type: :request do
         patch "/api/v1/wallets/#{wallet.id}",
               params:  invalid_attributes , headers: valid_headers, as: :json
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to eq('application/json; charset=utf-8')
+       
       end
     end
   end
