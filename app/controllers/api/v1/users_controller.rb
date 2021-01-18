@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
   skip_before_action :authenticate_request, only: %i[login create]
   before_action :set_user, only: %i[show update destroy]
   before_action :authorize_admin, only: %i[index show update]
-  
+
   # POST /index
   def index
     @users = User.all.order('created_at DESC')

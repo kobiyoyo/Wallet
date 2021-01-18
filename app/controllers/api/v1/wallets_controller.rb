@@ -23,7 +23,6 @@ class Api::V1::WalletsController < ApplicationController
     else
       render json: @wallet.errors, status: :unprocessable_entity
     end
-
   end
 
   # PATCH/PUT /wallets/1
