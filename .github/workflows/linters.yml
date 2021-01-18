@@ -26,11 +26,16 @@ jobs:
     name: RSpec
     needs: rubocop-test
     runs-on: ubuntu-18.04
+    services:
+      postgres:
+        image: postgres
+        ports:
+        - 5432:5432
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.5.x
+          ruby-version:2.5.x
       - name: Install postgres client
         run: sudo apt-get install libpq-dev
       - name: Install dependencies
