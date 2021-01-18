@@ -22,4 +22,4 @@ class JsonWebToken
       raise ExceptionHandler::DecodeError, e.message
     end
   end
-end 
+end
